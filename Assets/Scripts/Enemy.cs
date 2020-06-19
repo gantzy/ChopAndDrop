@@ -113,7 +113,7 @@ public class Enemy : MonoBehaviourPun
     }
 
     [PunRPC]
-    void FlashDamage()
+    public void FlashDamage()
     {
         StartCoroutine(DamageFlash());
 
