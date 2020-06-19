@@ -47,7 +47,6 @@ public class Enemy : MonoBehaviourPun
         {
             // calculate distance
             float dist = Vector2.Distance(transform.position, targetPlayer.transform.position);
-
             if (dist < attackRange && Time.time - lastAttackTime >= attackRate)
                 Attack();
             else if (dist > attackRange)
@@ -59,7 +58,10 @@ public class Enemy : MonoBehaviourPun
             {
                 rig.velocity = Vector2.zero;
             }
-            
+        }
+        else
+        {
+            rig.velocity = Vector2.zero;
         }
 
         DetectPlayer();
@@ -80,6 +82,7 @@ public class Enemy : MonoBehaviourPun
             // loop through players
             foreach(PlayerController player in GameManager.instance.players)
             {
+
                 // calc distance between enemy and player
                 float dist = Vector2.Distance(transform.position, player.transform.position);
 

@@ -141,7 +141,7 @@ public class PlayerController : MonoBehaviourPun
         dead = false;
         transform.position = spawnPos;
         curHP = maxHP;
-        rig.isKinematic = true;
+        rig.isKinematic = false;
 
         // update health bar
         headerInfo.photonView.RPC("UpdateHealthBar", RpcTarget.All, curHP);
