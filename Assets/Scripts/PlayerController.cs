@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviourPun
     public static PlayerController me;
 
     [PunRPC]
-
     public void Initialize(Player player)
     {
         id = player.ActorNumber;
@@ -148,7 +147,7 @@ public class PlayerController : MonoBehaviourPun
     }
 
     [PunRPC]
-    void Heal(int amountToHeal)
+    public void Heal(int amountToHeal)
     {
         curHP = Mathf.Clamp(curHP + amountToHeal, 0, maxHP);
 
@@ -157,7 +156,7 @@ public class PlayerController : MonoBehaviourPun
     }
 
     [PunRPC]
-    void GiveGold(int goldToGive)
+    public void GiveGold(int goldToGive)
     {
         gold += goldToGive;
 

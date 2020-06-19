@@ -41,7 +41,7 @@ public class ChatBox : MonoBehaviourPun
     }
 
     [PunRPC]
-    void Log(string playerName, string message)
+    public void Log(string playerName, string message)
     {
         chatLogText.text += string.Format("<b>{0}:</b> {1}\n", playerName, message);
 

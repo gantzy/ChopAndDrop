@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviourPun
     }
 
     [PunRPC]
-    void ImInGame()
+    public void ImInGame()
     {
         playersInGame++;
 

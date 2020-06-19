@@ -114,7 +114,7 @@ public class Menu : MonoBehaviourPunCallbacks, ILobbyCallbacks
     }
 
     [PunRPC]
-    void UpdateLobbyUI()
+    public void UpdateLobbyUI()
     {
         // enable or disable the start game button depending on if we're the host
         startGameButton.interactable = PhotonNetwork.IsMasterClient;
